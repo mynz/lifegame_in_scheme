@@ -10,7 +10,7 @@
 
 (define *width*  30)
 (define *height* 15)
-(define *file-path* "/tmp/lifegame_block.txt")
+(define *file-path* "/tmp/lifegame_cells")
 
 (define (make-random-block w h)
   (map (lambda (v)
@@ -140,8 +140,7 @@
 		  (html:head
 			(html:meta :http-equiv "refresh" :content #`"0 ; URL=,rediredt-uri")
 			(html:meta :charset "UTF-8")
-			(html:title "clear")) 
-		  )
+			(html:title "clear")))
 		(html:body "clear cells"))))
 
   (define (has-rval rval params )
@@ -170,7 +169,7 @@
 				(html:html
 				  (html:head
 					(html:meta :charset "UTF-8")
-					(html:title "mainmaoin"))
+					(html:title "Life Game"))
 				  (html:body
 					(html:div (html:a  :href uri "[Reload to succeed next generation]"))
 					(html:div (html:a  :href (string-append path "?clear=1") "[Clear]"))
